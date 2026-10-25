@@ -6,11 +6,17 @@ with the architecture lessons that attack taught.
 
 ## Chapter 1: Built (Wazuh era, from Jun 2026)
 
-![Wazuh security events dashboard: 4,764 events, 4,472 authentication failures](screenshots/wazuh-dashboard.jpg)
+<img src="screenshots/wazuh-dashboard.jpg" alt="Wazuh security events dashboard: 4,764 events, 4,472 authentication failures" width="600">
 
-![VirusTotal 0/63 result for /usr/bin/diff](screenshots/virustotal-check.jpg)
+*Wazuh dashboard: 4,764 events and 4,472 authentication failures in 24 hours.*
 
-![Community reports confirming the /usr/bin/diff hit as a known false positive](screenshots/virustotal-community-comments.jpg)
+<details>
+<summary>▸ Evidence: <code>/usr/bin/diff</code> false-positive verification</summary>
+<br>
+<img src="screenshots/virustotal-check.jpg" alt="VirusTotal 0/63 result for /usr/bin/diff" width="600">
+<br><br>
+<img src="screenshots/virustotal-community-comments.jpg" alt="Community reports confirming the /usr/bin/diff hit as a known false positive" width="600">
+</details>
 
 - Cloud SOC on DigitalOcean, built around Wazuh SIEM/XDR, monitoring a
   fictional freight company, Nexus Freight Solutions.
@@ -41,13 +47,21 @@ with the architecture lessons that attack taught.
 
 ## Chapter 3: Rebuilt better (Elastic era, from Oct 2026)
 
-![The rebuilt Nexus Freight site front page](screenshots/nexus-homepage.png)
+<img src="screenshots/elastic-custom-rule.png" alt="Custom detection rule: Nexus portal upload via Node" width="600">
 
-![Admin tools page showing the deliberate vulnerabilities with their lab notes](screenshots/nexus-admin-tools.png)
+*Custom Elastic detection rule written for the Node.js upload path ("Nexus portal upload via Node").*
 
-![Custom detection rule: Nexus portal upload via Node](screenshots/elastic-custom-rule.png)
+<img src="screenshots/alert-closed.png" alt="First alert from the custom rule, triaged and closed with a note" width="600">
 
-![First alert from the custom rule, triaged and closed with a note](screenshots/alert-closed.png)
+*First alert from that rule, triaged end to end and closed with a documented verdict.*
+
+<details>
+<summary>▸ The rebuilt app and its six deliberate vulnerabilities</summary>
+<br>
+<img src="screenshots/nexus-homepage.png" alt="The rebuilt Nexus Freight site front page" width="600">
+<br><br>
+<img src="screenshots/nexus-admin-tools.png" alt="Admin tools page showing the deliberate vulnerabilities with their lab notes" width="600">
+</details>
 
 - Split into two servers. The target and the SIEM now live on separate
   machines, talking over a private network. Compromising the app no longer
