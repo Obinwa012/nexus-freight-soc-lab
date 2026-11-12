@@ -86,6 +86,12 @@ with the architecture lessons that attack taught.
 The lesson from both labs: your monitoring has to survive the incident it is
 supposed to detect.
 
+## Investigation writeups
+
+Full triage walkthroughs from the lab, one alert at a time.
+
+- [Suricata "STREAM pkt seen on wrong thread" (false positive)](investigations/suricata-stream-false-positive.md). A 603-alert spike that turned out to be a sensor threading artifact, not an attack.
+
 ## Current lab environment
 
 - Target: custom Next.js freight site plus customer portal in Docker, behind
